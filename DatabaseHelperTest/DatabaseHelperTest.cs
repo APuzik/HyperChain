@@ -126,15 +126,15 @@ namespace DatabaseHelperTest
         [DeploymentItem("DatabaseHelper.dll")]
         public void GetItemTest()
         {
-            PrivateObject param0 = null; // TODO: Initialize to an appropriate value
-            DatabaseHelper_Accessor target = new DatabaseHelper_Accessor(param0); // TODO: Initialize to an appropriate value
-            string sParent = string.Empty; // TODO: Initialize to an appropriate value
-            string sChild = string.Empty; // TODO: Initialize to an appropriate value
-            RelationItem expected = null; // TODO: Initialize to an appropriate value
-            RelationItem actual;
-            actual = target.GetRelationItem(sParent, sChild);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            //PrivateObject param0 = null; // TODO: Initialize to an appropriate value
+            //DatabaseHelper_Accessor target = new DatabaseHelper_Accessor(param0); // TODO: Initialize to an appropriate value
+            //string sParent = string.Empty; // TODO: Initialize to an appropriate value
+            //string sChild = string.Empty; // TODO: Initialize to an appropriate value
+            //RelationItem expected = null; // TODO: Initialize to an appropriate value
+            //RelationItem actual;
+            //actual = target.GetRelationItem(sParent, sChild);
+            //Assert.AreEqual(expected, actual);
+            //Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
         /// <summary>
@@ -176,17 +176,17 @@ namespace DatabaseHelperTest
         ///A test for GetWordId
         ///</summary>
         [TestMethod()]
-        [DeploymentItem("DatabaseHelper.dll")]
+//       [DeploymentItem("DatabaseHelper.dll")]
         public void GetWordIdTest()
         {
-            PrivateObject param0 = null; // TODO: Initialize to an appropriate value
-            DatabaseHelper_Accessor target = new DatabaseHelper_Accessor(param0); // TODO: Initialize to an appropriate value
-            string sWord = string.Empty; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.GetWordId(sWord);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            //PrivateObject param0 = null; // TODO: Initialize to an appropriate value
+            //DatabaseHelper_Accessor target = new DatabaseHelper_Accessor(param0); // TODO: Initialize to an appropriate value
+            //string sWord = string.Empty; // TODO: Initialize to an appropriate value
+            //int expected = 0; // TODO: Initialize to an appropriate value
+            //int actual;
+            //actual = target.GetWordId(sWord);
+            //Assert.AreEqual(expected, actual);
+            //Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
         /// <summary>

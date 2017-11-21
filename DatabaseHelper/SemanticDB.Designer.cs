@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
-
 namespace DatabaseHelper
 {
     #region Contexts
@@ -114,6 +114,7 @@ namespace DatabaseHelper
         private ObjectSet<WordItem> _tbl_WordItems;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -141,11 +142,11 @@ namespace DatabaseHelper
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -174,7 +175,8 @@ namespace DatabaseHelper
         }
 
         #endregion
-        #region Primitive Properties
+
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -193,7 +195,7 @@ namespace DatabaseHelper
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -218,7 +220,7 @@ namespace DatabaseHelper
             {
                 OnRealtionItemIdChanging(value);
                 ReportPropertyChanging("RealtionItemId");
-                _RealtionItemId = StructuralObject.SetValidValue(value);
+                _RealtionItemId = StructuralObject.SetValidValue(value, "RealtionItemId");
                 ReportPropertyChanged("RealtionItemId");
                 OnRealtionItemIdChanged();
             }
@@ -242,7 +244,7 @@ namespace DatabaseHelper
             {
                 OnEditorIdChanging(value);
                 ReportPropertyChanging("EditorId");
-                _EditorId = StructuralObject.SetValidValue(value);
+                _EditorId = StructuralObject.SetValidValue(value, "EditorId");
                 ReportPropertyChanged("EditorId");
                 OnEditorIdChanged();
             }
@@ -266,7 +268,7 @@ namespace DatabaseHelper
             {
                 OnRelationTypeChanging(value);
                 ReportPropertyChanging("RelationType");
-                _RelationType = StructuralObject.SetValidValue(value);
+                _RelationType = StructuralObject.SetValidValue(value, "RelationType");
                 ReportPropertyChanged("RelationType");
                 OnRelationTypeChanged();
             }
@@ -276,7 +278,7 @@ namespace DatabaseHelper
         partial void OnRelationTypeChanged();
 
         #endregion
-    
+
     }
     
     /// <summary>
@@ -309,7 +311,8 @@ namespace DatabaseHelper
         }
 
         #endregion
-        #region Primitive Properties
+
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -328,7 +331,7 @@ namespace DatabaseHelper
                 {
                     OnParentIdChanging(value);
                     ReportPropertyChanging("ParentId");
-                    _ParentId = StructuralObject.SetValidValue(value);
+                    _ParentId = StructuralObject.SetValidValue(value, "ParentId");
                     ReportPropertyChanged("ParentId");
                     OnParentIdChanged();
                 }
@@ -355,7 +358,7 @@ namespace DatabaseHelper
                 {
                     OnChildIdChanging(value);
                     ReportPropertyChanging("ChildId");
-                    _ChildId = StructuralObject.SetValidValue(value);
+                    _ChildId = StructuralObject.SetValidValue(value, "ChildId");
                     ReportPropertyChanged("ChildId");
                     OnChildIdChanged();
                 }
@@ -380,7 +383,7 @@ namespace DatabaseHelper
             {
                 OnIsAutoChanging(value);
                 ReportPropertyChanging("IsAuto");
-                _IsAuto = StructuralObject.SetValidValue(value);
+                _IsAuto = StructuralObject.SetValidValue(value, "IsAuto");
                 ReportPropertyChanged("IsAuto");
                 OnIsAutoChanged();
             }
@@ -404,7 +407,7 @@ namespace DatabaseHelper
             {
                 OnRelationTypeChanging(value);
                 ReportPropertyChanging("RelationType");
-                _RelationType = StructuralObject.SetValidValue(value);
+                _RelationType = StructuralObject.SetValidValue(value, "RelationType");
                 ReportPropertyChanged("RelationType");
                 OnRelationTypeChanged();
             }
@@ -430,7 +433,7 @@ namespace DatabaseHelper
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -455,7 +458,7 @@ namespace DatabaseHelper
             {
                 OnRelationTypeGroupChanging(value);
                 ReportPropertyChanging("RelationTypeGroup");
-                _RelationTypeGroup = StructuralObject.SetValidValue(value);
+                _RelationTypeGroup = StructuralObject.SetValidValue(value, "RelationTypeGroup");
                 ReportPropertyChanged("RelationTypeGroup");
                 OnRelationTypeGroupChanged();
             }
@@ -465,7 +468,7 @@ namespace DatabaseHelper
         partial void OnRelationTypeGroupChanged();
 
         #endregion
-    
+
     }
     
     /// <summary>
@@ -496,7 +499,8 @@ namespace DatabaseHelper
         }
 
         #endregion
-        #region Primitive Properties
+
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -515,7 +519,7 @@ namespace DatabaseHelper
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -542,7 +546,7 @@ namespace DatabaseHelper
                 {
                     OnWordChanging(value);
                     ReportPropertyChanging("Word");
-                    _Word = StructuralObject.SetValidValue(value, false);
+                    _Word = StructuralObject.SetValidValue(value, false, "Word");
                     ReportPropertyChanged("Word");
                     OnWordChanged();
                 }
@@ -567,7 +571,7 @@ namespace DatabaseHelper
             {
                 OnStatusChanging(value);
                 ReportPropertyChanging("Status");
-                _Status = StructuralObject.SetValidValue(value);
+                _Status = StructuralObject.SetValidValue(value, "Status");
                 ReportPropertyChanged("Status");
                 OnStatusChanged();
             }
@@ -591,7 +595,7 @@ namespace DatabaseHelper
             {
                 OnInMainDBChanging(value);
                 ReportPropertyChanging("InMainDB");
-                _InMainDB = StructuralObject.SetValidValue(value);
+                _InMainDB = StructuralObject.SetValidValue(value, "InMainDB");
                 ReportPropertyChanged("InMainDB");
                 OnInMainDBChanged();
             }
@@ -615,7 +619,7 @@ namespace DatabaseHelper
             {
                 OnReviewedChanging(value);
                 ReportPropertyChanging("Reviewed");
-                _Reviewed = StructuralObject.SetValidValue(value);
+                _Reviewed = StructuralObject.SetValidValue(value, "Reviewed");
                 ReportPropertyChanged("Reviewed");
                 OnReviewedChanged();
             }
@@ -639,7 +643,7 @@ namespace DatabaseHelper
             {
                 OnHomonymChanging(value);
                 ReportPropertyChanging("Homonym");
-                _Homonym = StructuralObject.SetValidValue(value);
+                _Homonym = StructuralObject.SetValidValue(value, "Homonym");
                 ReportPropertyChanged("Homonym");
                 OnHomonymChanged();
             }
@@ -663,7 +667,7 @@ namespace DatabaseHelper
             {
                 OnStatusLastTimeUpdateChanging(value);
                 ReportPropertyChanging("StatusLastTimeUpdate");
-                _StatusLastTimeUpdate = StructuralObject.SetValidValue(value);
+                _StatusLastTimeUpdate = StructuralObject.SetValidValue(value, "StatusLastTimeUpdate");
                 ReportPropertyChanged("StatusLastTimeUpdate");
                 OnStatusLastTimeUpdateChanged();
             }
@@ -673,9 +677,9 @@ namespace DatabaseHelper
         partial void OnStatusLastTimeUpdateChanged();
 
         #endregion
-    
+
     }
 
     #endregion
-    
+
 }

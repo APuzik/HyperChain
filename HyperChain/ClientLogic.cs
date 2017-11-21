@@ -8,7 +8,7 @@ using System.Threading;
 //using HyperChain.Properties.DataSources.SemanticDBDataSetTableAdapters;
 using System.Data;
 //using System.Data.SqlClient;
-using System.Data.SqlServerCe;
+//using System.Data.SqlServerCe;
 //using DatabaseHelper;
 using SemanticLinkHelper;
 using System.ServiceModel.Description;

@@ -224,13 +224,13 @@ namespace SemanticLinkHelperTest
         [DeploymentItem("SemanticLinkHelper.dll")]
         public void IsNounTest1()
         {
-            SemanticHelper_Accessor target = new SemanticHelper_Accessor(); // TODO: Initialize to an appropriate value
-            byte btLangPartId = 0; // TODO: Initialize to an appropriate value
-            bool expected = false; // TODO: Initialize to an appropriate value
-            bool actual;
-            actual = target.IsNoun(btLangPartId);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            //SemanticHelper_Accessor target = new SemanticHelper_Accessor(); // TODO: Initialize to an appropriate value
+            //byte btLangPartId = 0; // TODO: Initialize to an appropriate value
+            //bool expected = false; // TODO: Initialize to an appropriate value
+            //bool actual;
+            //actual = target.IsNoun(btLangPartId);
+            //Assert.AreEqual(expected, actual);
+            //Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
         /// <summary>

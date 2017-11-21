@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperChain", "HyperChain\HyperChain.csproj", "{C619F53C-9502-4AA4-A3B1-1BA02D1B9AF0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D22224CE-D526-468C-A068-2E0F45E7571E} = {D22224CE-D526-468C-A068-2E0F45E7571E}
@@ -21,10 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticLinkHelperTest", "SemanticLinkHelperTest\SemanticLinkHelperTest.csproj", "{9698A5B1-2ECC-422E-999D-471DD1F0B581}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperChainModel", "HyperChainModel\HyperChainModel.csproj", "{0BD448AF-A538-45C6-90E6-FA4157F48897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperChainTestConsole", "HyperChainTestConsole\HyperChainTestConsole.csproj", "{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = HyperChain.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -92,8 +95,38 @@ Global
 		{9698A5B1-2ECC-422E-999D-471DD1F0B581}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9698A5B1-2ECC-422E-999D-471DD1F0B581}.Release|x86.ActiveCfg = Release|x86
 		{9698A5B1-2ECC-422E-999D-471DD1F0B581}.Release|x86.Build.0 = Release|x86
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Debug|x86.Build.0 = Debug|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Release|x86.ActiveCfg = Release|Any CPU
+		{0BD448AF-A538-45C6-90E6-FA4157F48897}.Release|x86.Build.0 = Release|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC920AB8-1E54-4BEA-804E-0657C3A42BFD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AD3A360-EB1E-4250-AEAC-EA41E22E3E0A}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = HyperChain.vsmdi
 	EndGlobalSection
 EndGlobal

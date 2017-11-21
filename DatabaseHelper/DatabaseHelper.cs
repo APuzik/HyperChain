@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 using System.Data.EntityClient;
+using System.Diagnostics;
+using System.IO;
 //using System.Data.SqlServerCe;
 //using DatabaseHelper.Properties.DataSources.SemanticDBDataSetTableAdapters;
 
@@ -19,12 +21,23 @@ namespace DatabaseHelper
         bool m_bMainDB = false;
 
         public DatabaseHelper(string sConnectionString)
-        {            
-            ConnectionStringSettings conn = ConfigurationManager.ConnectionStrings["SemanticDBEntities"];
-            m_Database = new SemanticDBEntities();
-            
-            string s = m_Database.Connection.ConnectionString;
-            int j = 1;
+        {
+            try
+            {
+                ConnectionStringSettings conn = ConfigurationManager.ConnectionStrings["SemanticDBEntities"];
+                m_Database = new SemanticDBEntities();
+
+                string s = m_Database.Connection.ConnectionString;
+            }
+            catch (Exception ex)
+            {
+                Trace.Listeners.Add(new TextWriterTraceListener(Path.Combine(Directory.GetCurrentDirectory(), "log.txt")));
+                Trace.AutoFlush = true;
+                Trace.WriteLine(ex.Message);
+                
+                int j = 1;
+            }
+
         }
 
         bool MainDB
